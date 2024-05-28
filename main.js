@@ -1,26 +1,30 @@
-function twoSum(array, target) {
-    
-    for (let indice1 = 0; indice1 < array.length; indice1++){
+document.addEventListener('DOMContentLoaded', () => {
 
-        for (let indice2=indice1+1; indice2 < array.length; indice2++){
+    let valeur_counter = 0;
 
-            if (array[indice1] + array[indice2] == target){
-                return [indice1,indice2];
-            }
-        }
+    const counter_initial = document.getElementById('counter-initial');
+    const boutton_augmenter = document.getElementById('augmenter');
+    const boutton_diminuer = document.getElementById('diminuer');
+    const boutton_reset = document.getElementById('reset');
+
+    function New_value_counter() {
+        counter_initial.textContent = valeur_counter;
     }
-    return null;
-}
 
-//exemple
+    boutton_augmenter.addEventListener('click', () => {
+        valeur_counter++;
+        New_value_counter();
+    });
 
-let array = [2,7,11,15];
-let target = 9;
-let affichage_indices=twoSum(array,target);
-console.log(affichage_indices);
+    boutton_diminuer.addEventListener('click', () => {
+        valeur_counter--;
+        New_value_counter();
+    });
 
-let array2 = [2,4,6,1,7,10,13];
-let target2 = 12;
-let affichage_indices2=twoSum(array2,target2);
-console.log(affichage_indices2);
+    boutton_reset.addEventListener('click', () => {
+        valeur_counter = 0;
+        New_value_counter();
+    });
 
+    New_value_counter();  
+});

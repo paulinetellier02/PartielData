@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphique en barre de la population</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Application Web</title>
 </head>
-<body>
 
-    <div id="data-viz">  </div>
-</body>
-<script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
-<script src="viz.js"></script>
+<body>    
+    <div class="counter-affichage">
+
+        <h2> Counter </h2>
+
+        <div id="counter-initial">0</div>
+        <br>
+        <button id="diminuer">Diminuer</button>
+        <button id="reset">Réinitialiser</button>
+        <button id="augmenter">Augmenter</button>
+
+    </div>
+
+<script src="main.js"></script>
 </html>
 
-  
+
